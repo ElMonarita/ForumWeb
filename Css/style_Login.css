@@ -1,0 +1,156 @@
+/* ============================
+   VARIABLES (reprises telles quelles)
+============================ */
+
+:root {
+  --bg-main: #F2E8CF;
+  --bg-card: #ffffff;
+  --text-main: #2F4F2F;
+  --text-muted: #5F6F52;
+  --accent: #E27D60;
+  --accent-hover: #D2691E;
+  --footer-bg: #344E41;
+  --focus-color: #ff9900;
+}
+
+/* ============================
+   RESET
+============================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ============================
+   MAIN (carte login)
+============================ */
+
+main {
+  background-color: var(--bg-card);
+  width: 100%;
+  max-width: 420px;
+  padding: 3rem 2.5rem;
+  border-radius: 18px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+}
+
+/* ============================
+   TITRE
+============================ */
+
+main h1 {
+  text-align: center;
+  margin-bottom: 2rem;
+  font-size: 2rem;
+}
+
+/* ============================
+   FORMULAIRE
+============================ */
+
+form p {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  font-weight: 600;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+input {
+  width: 100%;
+  padding: 0.7rem 0.8rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  font-family: inherit;
+}
+
+input:focus {
+  outline: none;
+  border-color: var(--focus-color);
+  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.3);
+}
+
+/* ============================
+   BOUTON
+============================ */
+
+button {
+  width: 100%;
+  padding: 0.8rem;
+  border-radius: 25px;
+  border: none;
+  background-color: var(--accent);
+  color: white;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--accent-hover);
+  transform: scale(1.03);
+}
+
+button:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+/* ============================
+   LIENS
+============================ */
+
+main > p {
+  text-align: center;
+  margin-top: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+a {
+  color: var(--accent);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+a:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media (max-width: 480px) {
+  main {
+    padding: 2rem 1.5rem;
+  }
+
+  main h1 {
+    font-size: 1.6rem;
+  }
+}

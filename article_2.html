@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <title>Forum — Post</title>
+        <link rel="stylesheet" href="Css/style_Article.css">
+    </head>
+
+  <body>
+    <header>
+      <h1>Forum</h1>
+      <nav>
+        <a href="index.html">Sujet</a>
+        <a href="login.html">Profil</a>
+      </nav>
+    </header>
+
+    <main>
+      <article id="sujet">
+        <header>
+          <h2>Problème avec mon ordinateur</h2>
+          <p>
+            <strong>Auteur :</strong> Alex |
+            <strong>Date :</strong> 29 janvier 2026 |
+            <strong>Tags :</strong> assistance, matériel
+          </p>
+        </header>
+
+        <section>
+          <p>
+            Bonjour à tous, depuis ce matin mon ordinateur redémarre tout seul au bout de
+            quelques minutes. J’ai déjà essayé de vérifier les mises à jour et de dépoussiérer
+            un peu, mais rien n’a changé.
+          </p>
+          <p>
+            Est-ce que ça vous est déjà arrivé ? Des pistes pour diagnostiquer (température,
+            alim, pilotes, etc.) ?
+          </p>
+        </section>
+
+        <footer>
+          <p><strong>Réponses :</strong> 3</p>
+        </footer>
+      </article>
+
+      <section aria-labelledby="commentaires">
+        <h3 id="commentaires">Commentaires</h3>
+
+        <article>
+          <header>
+            <p>
+              <strong>Camille</strong> — <time datetime="2026-01-29T10:12">10:12</time>
+            </p>
+          </header>
+          <p>
+            Ça ressemble à une surchauffe ou une alimentation qui lâche. Tu peux regarder les
+            températures (CPU/GPU) et écouter si les ventilateurs s’emballent juste avant le
+            redémarrage.
+          </p>
+        </article>
+
+      </section>
+
+      <section aria-labelledby="repondre">
+        <h3 id="repondre">Répondre</h3>
+        <form action="#" method="post">
+          <p>
+            <label for="pseudo">Pseudo</label><br />
+            <input id="pseudo" name="pseudo" type="text" />
+          </p>
+          <p>
+            <label for="message">Message</label><br />
+            <textarea id="message" name="message" rows="6" cols="60"></textarea>
+          </p>
+          <p>
+            <button type="submit">Publier</button>
+          </p>
+        </form>
+      </section>
+    </main>
+
+    <footer>
+      <p>© Forum — Tous droits réservés</p>
+    </footer>
+  </body>
+</html>

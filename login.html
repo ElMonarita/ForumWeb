@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Connexion</title>
+    <link rel="stylesheet" href="Css/style_Login.css">
+  </head>
+
+  <body>
+    <main>
+      <h1>Connexion</h1>
+
+      <form action="/login" method="post">
+        <p>
+          <label for="email">Email</label><br />
+          <input
+            type="email"
+            id="email"
+            name="email"
+            autocomplete="username"
+            required
+          />
+        </p>
+
+        <p>
+          <label for="password">Mot de passe</label><br />
+          <input
+            type="password"
+            id="password"
+            name="password"
+            autocomplete="current-password"
+            required
+          />
+        </p>
+
+        <p>
+          <button type="submit">Se connecter</button>
+        </p>
+      </form>
+
+      <p>
+        <a href="/forgot-password">Mot de passe oublié ?</a>
+      </p>
+
+      <p>
+        Pas de compte ? <a href="/register">Créer un compte</a>
+      </p>
+    </main>
+  </body>
+</html>
