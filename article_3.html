@@ -1,104 +1,112 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Forum — Post</title>
-        <link rel="stylesheet" href="Css/style_Article.css">
-    </head>
 
-  <body>
-    <header>
-      <h1>Forum</h1>
-      <nav>
-        <a href="index.html">Accueil</a>
-        <a href="login.html">Login</a>
-      </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forum — Post</title>
+  <link rel="stylesheet" href="Css/style_Article.css">
+</head>
 
-    <main>
-      <article id="sujet">
+<body>
+  <header>
+    <h1>Forum</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="sujet">
+      <header>
+        <h2>Une communication riche et variée</h2>
+        <p>
+          <strong>Auteur :</strong> Alex |
+          <strong>Date :</strong> 29 janvier 2026 |
+          <strong>Tags :</strong> assistance, matériel
+        </p>
+      </header>
+
+      <section>
+        <p>
+          Les bonobos possèdent une communication riche et variée qui joue un rôle essentiel dans leur vie sociale. Ils
+          utilisent une large gamme de sons, de gestes et d’expressions faciales pour transmettre des informations,
+          exprimer des émotions ou renforcer les liens entre individus. Un simple regard, une posture ou un cri
+          spécifique peut signaler l’apaisement, l’alerte ou l’envie d’interagir. Cette diversité de moyens de
+          communication leur permet de maintenir une cohésion forte au sein du groupe et de résoudre de nombreuses
+          situations sans recourir à l’agressivité. Grâce à cette capacité d’expression élaborée, les bonobos démontrent
+          une intelligence sociale remarquable et une grande sensibilité aux émotions des autres.
+        </p>
+        <p>
+          Ils peuvent en donner au Humains ?
+        </p>
+      </section>
+
+      <footer>
+        <p><strong>Réponses :</strong> 3</p>
+      </footer>
+    </article>
+
+    <section aria-labelledby="commentaires">
+      <h3 id="commentaires">Commentaires</h3>
+
+      <article>
         <header>
-          <h2>Une communication riche et variée</h2>
           <p>
-            <strong>Auteur :</strong> Alex |
-            <strong>Date :</strong> 29 janvier 2026 |
-            <strong>Tags :</strong> assistance, matériel
+            <strong>Camille</strong> — <time datetime="2026-01-29T10:12">10:12</time>
           </p>
         </header>
-
-        <section>
-          <p>
-            Les bonobos possèdent une communication riche et variée qui joue un rôle essentiel dans leur vie sociale. Ils utilisent une large gamme de sons, de gestes et d’expressions faciales pour transmettre des informations, exprimer des émotions ou renforcer les liens entre individus. Un simple regard, une posture ou un cri spécifique peut signaler l’apaisement, l’alerte ou l’envie d’interagir. Cette diversité de moyens de communication leur permet de maintenir une cohésion forte au sein du groupe et de résoudre de nombreuses situations sans recourir à l’agressivité. Grâce à cette capacité d’expression élaborée, les bonobos démontrent une intelligence sociale remarquable et une grande sensibilité aux émotions des autres.
-          </p>
-          <p>
-            Ils peuvent en donner au Humains ?
-          </p>
-        </section>
-
-        <footer>
-          <p><strong>Réponses :</strong> 3</p>
-        </footer>
+        <p>
+          Je ne crois pas, vue qu'ils sont dans des zoo.
+        </p>
       </article>
 
-      <section aria-labelledby="commentaires">
-        <h3 id="commentaires">Commentaires</h3>
+      <article>
+        <header>
+          <p>
+            <strong>Mehdi</strong> — <time datetime="2026-01-29T10:35">10:35</time>
+          </p>
+        </header>
+        <p>
+          Ouhouhahahah
+        </p>
+      </article>
 
-        <article>
-          <header>
-            <p>
-              <strong>Camille</strong> — <time datetime="2026-01-29T10:12">10:12</time>
-            </p>
-          </header>
+      <article>
+        <header>
           <p>
-            Je ne crois pas, vue qu'ils sont dans des zoo.
+            <strong>Sophie</strong> — <time datetime="2026-01-29T11:02">11:02</time>
           </p>
-        </article>
+        </header>
+        <p>
+          Si tu as récemment changé quelque chose (RAM, disque, pilote), tente un démarrage
+          en mode sans échec. Et si possible, essaie une autre prise / multiprise.
+        </p>
+      </article>
+    </section>
 
-        <article>
-          <header>
-            <p>
-              <strong>Mehdi</strong> — <time datetime="2026-01-29T10:35">10:35</time>
-            </p>
-          </header>
-          <p>
-            Ouhouhahahah
-          </p>
-        </article>
+    <section aria-labelledby="repondre">
+      <h3 id="repondre">Répondre</h3>
+      <form action="#" method="post">
+        <p>
+          <label for="pseudo">Pseudo</label><br />
+          <input id="pseudo" name="pseudo" type="text" />
+        </p>
+        <p>
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message" rows="6" cols="60"></textarea>
+        </p>
+        <p>
+          <button type="submit">Publier</button>
+        </p>
+      </form>
+    </section>
+  </main>
 
-        <article>
-          <header>
-            <p>
-              <strong>Sophie</strong> — <time datetime="2026-01-29T11:02">11:02</time>
-            </p>
-          </header>
-          <p>
-            Si tu as récemment changé quelque chose (RAM, disque, pilote), tente un démarrage
-            en mode sans échec. Et si possible, essaie une autre prise / multiprise.
-          </p>
-        </article>
-      </section>
+  <footer>
+    <p>© Forum — Tous droits réservés</p>
+  </footer>
+</body>
 
-      <section aria-labelledby="repondre">
-        <h3 id="repondre">Répondre</h3>
-        <form action="#" method="post">
-          <p>
-            <label for="pseudo">Pseudo</label><br />
-            <input id="pseudo" name="pseudo" type="text" />
-          </p>
-          <p>
-            <label for="message">Message</label><br />
-            <textarea id="message" name="message" rows="6" cols="60"></textarea>
-          </p>
-          <p>
-            <button type="submit">Publier</button>
-          </p>
-        </form>
-      </section>
-    </main>
-
-    <footer>
-      <p>© Forum — Tous droits réservés</p>
-    </footer>
-  </body>
 </html>

@@ -1,93 +1,99 @@
 <!doctype html>
 <html lang="fr">
-    <head>
-        <meta charset="utf-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <title>Forum — Post</title>
-        <link rel="stylesheet" href="Css/style_Article.css">
-    </head>
 
-  <body>
-    <header>
-        <h1>Forum</h1>
-        <nav>
-            <a href="index.html">Accueil</a>
-            <a href="login.html">Login</a>
-        </nav>
-    </header>
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Forum — Post</title>
+  <link rel="stylesheet" href="Css/style_Article.css">
+</head>
 
-    <main>
-      <article id="sujet">
+<body>
+  <header>
+    <h1>Forum</h1>
+    <nav>
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Login</a>
+    </nav>
+  </header>
+
+  <main>
+    <article id="sujet">
+      <header>
+        <h2>Problème avec mon ordinateur</h2>
+        <p>
+          <strong>Auteur :</strong> Alex |
+          <strong>Date :</strong> 29 janvier 2026 |
+          <strong>Tags :</strong> assistance, matériel
+        </p>
+      </header>
+
+      <section>
+        <p>
+          Malgré leurs qualités exceptionnelles, les bonobos sont aujourd’hui en danger d’extinction. La déforestation,
+          le braconnage et les conflits armés dans leur région d’habitat mettent en péril leur survie. Leur population
+          est estimée à seulement quelques dizaines de milliers d’individus. De nombreuses organisations œuvrent pour la
+          protection de cette espèce, à travers la création de réserves naturelles, des programmes de sensibilisation et
+          la lutte contre le commerce illégal.
+        </p>
+        <p>
+          Vous aussi venez aider les bonobos à se defendre contre les envahisseurs.
+        </p>
+      </section>
+
+      <footer>
+        <p><strong>Réponses :</strong> 3</p>
+      </footer>
+    </article>
+
+    <section aria-labelledby="commentaires">
+      <h3 id="commentaires">Commentaires</h3>
+
+      <article>
         <header>
-          <h2>Problème avec mon ordinateur</h2>
           <p>
-            <strong>Auteur :</strong> Alex |
-            <strong>Date :</strong> 29 janvier 2026 |
-            <strong>Tags :</strong> assistance, matériel
+            <strong>Alice</strong> — <time datetime="2026-01-29T10:12">10:12</time>
           </p>
         </header>
-
-        <section>
-          <p>
-            Malgré leurs qualités exceptionnelles, les bonobos sont aujourd’hui en danger d’extinction. La déforestation, le braconnage et les conflits armés dans leur région d’habitat mettent en péril leur survie. Leur population est estimée à seulement quelques dizaines de milliers d’individus. De nombreuses organisations œuvrent pour la protection de cette espèce, à travers la création de réserves naturelles, des programmes de sensibilisation et la lutte contre le commerce illégal.
-          </p>
-          <p>
-            Vous aussi venez aider les bonobos à se defendre contre les envahisseurs.
-          </p>
-        </section>
-
-        <footer>
-          <p><strong>Réponses :</strong> 3</p>
-        </footer>
+        <p>
+          A bas les braconiers, vive les bonobos
+        </p>
       </article>
 
-      <section aria-labelledby="commentaires">
-        <h3 id="commentaires">Commentaires</h3>
-
-        <article>
-          <header>
-            <p>
-              <strong>Alice</strong> — <time datetime="2026-01-29T10:12">10:12</time>
-            </p>
-          </header>
+      <article>
+        <header>
           <p>
-            A bas les braconiers, vive les bonobos
+            <strong>Mehdi</strong> — <time datetime="2026-01-29T10:35">10:35</time>
           </p>
-        </article>
+        </header>
+        <p>
+          Ouhouhahahah
+        </p>
+      </article>
 
-        <article>
-          <header>
-            <p>
-              <strong>Mehdi</strong> — <time datetime="2026-01-29T10:35">10:35</time>
-            </p>
-          </header>
-          <p>
-            Ouhouhahahah
-          </p>
-        </article>
+    </section>
 
-      </section>
+    <section aria-labelledby="repondre">
+      <h3 id="repondre">Répondre</h3>
+      <form action="#" method="post">
+        <p>
+          <label for="pseudo">Pseudo</label><br />
+          <input id="pseudo" name="pseudo" type="text" />
+        </p>
+        <p>
+          <label for="message">Message</label><br />
+          <textarea id="message" name="message" rows="6" cols="60"></textarea>
+        </p>
+        <p>
+          <button type="submit">Publier</button>
+        </p>
+      </form>
+    </section>
+  </main>
 
-      <section aria-labelledby="repondre">
-        <h3 id="repondre">Répondre</h3>
-        <form action="#" method="post">
-          <p>
-            <label for="pseudo">Pseudo</label><br />
-            <input id="pseudo" name="pseudo" type="text" />
-          </p>
-          <p>
-            <label for="message">Message</label><br />
-            <textarea id="message" name="message" rows="6" cols="60"></textarea>
-          </p>
-          <p>
-            <button type="submit">Publier</button>
-          </p>
-        </form>
-      </section>
-    </main>
+  <footer>
+    <p>© Forum — Tous droits réservés</p>
+  </footer>
+</body>
 
-    <footer>
-      <p>© Forum — Tous droits réservés</p>
-    </footer>
-  </body>
 </html>

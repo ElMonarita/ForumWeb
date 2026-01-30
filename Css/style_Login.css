@@ -23,7 +23,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -119,7 +120,7 @@ button:focus {
    LIENS
 ============================ */
 
-main > p {
+main>p {
   text-align: center;
   margin-top: 1rem;
   font-size: 0.95rem;

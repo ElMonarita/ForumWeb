@@ -16,7 +16,8 @@
   box-sizing: border-box;
 }
 
-html, body {
+html,
+body {
   height: 100%;
 }
 
@@ -32,14 +33,12 @@ body {
 /* ===== HEADER ===== */
 
 header {
-  background: linear-gradient(
-    #2F4F2F,
-    #3A5F3A
-  );
+  background: linear-gradient(#2F4F2F,
+      #3A5F3A);
   color: white;
   text-align: center;
   padding: 4rem 1rem 3rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
 header h1 {
@@ -75,26 +74,26 @@ main {
 
 /* ===== POST PRINCIPAL ===== */
 
-main > article {
+main>article {
   background-color: var(--bg-card);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 3rem;
-  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-main > article h2 {
+main>article h2 {
   margin-bottom: 0.5rem;
   font-size: 2rem;
 }
 
-main > article header p {
+main>article header p {
   font-size: 0.9rem;
   color: var(--bg-card);
   margin-bottom: 1.5rem;
 }
 
-main > article section p {
+main>article section p {
   margin-bottom: 1rem;
 }
 
@@ -117,7 +116,7 @@ section[aria-labelledby="commentaires"] article {
   background-color: var(--bg-card);
   border-radius: 10px;
   padding: 0.9rem 1.1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-left: 4px solid var(--accent);
 }
 
@@ -141,7 +140,7 @@ form {
   background-color: var(--bg-card);
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
 }
 
 label {
