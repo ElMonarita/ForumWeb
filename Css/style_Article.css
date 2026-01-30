@@ -4,9 +4,9 @@
   --text-main: #2F4F2F;
   --text-muted: #5F6F52;
   --accent: #B14020;
-  --accent-hover: #D2691E;
+  --accent-hover: #B14020;
   --footer-bg: #344E41;
-  --focus-color: #ff9900;
+  --focus-color: #B14020;
 }
 
 /* Reset */
