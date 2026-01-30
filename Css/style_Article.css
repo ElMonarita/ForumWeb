@@ -90,7 +90,7 @@ main > article h2 {
 
 main > article header p {
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--bg-card);
   margin-bottom: 1.5rem;
 }
 
