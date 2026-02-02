@@ -46,6 +46,11 @@ body > header {
   font-weight: 700;
 }
 
+header .logo {
+  height: 70px;
+  width: auto;
+}
+
 nav {
   display: flex;
   justify-content: center;

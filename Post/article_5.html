@@ -11,6 +11,7 @@
 <body>
 
 <header>
+  <img aria-hidden= "true" src="../Images/Logo.jpg" class="logo">
   <p id="site-title">Welcome to the world of Bonobo</p>
 
   <nav aria-labelledby="site-title">
@@ -21,10 +22,10 @@
 
 <main>
 
-  <article id="sujet" aria-labelledby="post-title">
+  <article id="sujet">
 
     <header>
-      <h2 id="post-title">Les bonobos et leur protection</h2>
+      <h1 id="post-title">Les bonobos et leur protection</h1>
 
       <p id="post-meta">
         <strong>Auteur :</strong> Alex |
@@ -51,11 +52,11 @@
 
   </article>
 
-  <section aria-labelledby="commentaires-title">
+  <section>
 
-    <h3 id="commentaires-title">Commentaires</h3>
+    <h2 id="commentaires-title">Commentaires</h2>
 
-    <section aria-labelledby="comment1-author">
+    <article>
       <header>
         <p id="comment1-author">
           <strong>Alice</strong> -
@@ -66,9 +67,9 @@
       <p>
         À bas les braconniers, vive les bonobos !
       </p>
-    </section>
+    </article>
 
-    <section aria-labelledby="comment2-author">
+    <article>
       <header>
         <p id="comment2-author">
           <strong>Mehdi</strong> -
@@ -79,66 +80,7 @@
       <p>
         Ouhouhahahah
       </p>
-    </section>
-
-  </section>
-
-  <section aria-labelledby="reply-title">
-
-    <h3 id="reply-title">Répondre</h3>
-
-    <form action="#" method="get" aria-describedby="form-help">
-
-      <p id="form-help">
-        Tous les champs sont obligatoires.
-      </p>
-
-      <div>
-        <label for="pseudo">Pseudo *</label>
-
-        <input
-          id="pseudo"
-          name="pseudo"
-          type="text"
-          required
-          minlength="3"
-          placeholder="Votre pseudo"
-          aria-describedby="pseudo-help"
-          oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
-          oninput="this.setCustomValidity('')" />
-
-        <small id="pseudo-help">
-          Minimum 3 caractères.
-        </small>
-      </div>
-
-      <div>
-        <label for="message">Message *</label>
-
-        <textarea
-          id="message"
-          name="message"
-          rows="6"
-          cols="60"
-          required
-          minlength="10"
-          placeholder="Votre message..."
-          aria-describedby="message-help"
-          oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
-          oninput="this.setCustomValidity('')"></textarea>
-
-        <small id="message-help">
-          Minimum 10 caractères.
-        </small>
-      </div>
-
-      <div>
-        <button type="submit" aria-label="Publier le commentaire">
-          Publier
-        </button>
-      </div>
-
-    </form>
+    </article>
 
   </section>
 
