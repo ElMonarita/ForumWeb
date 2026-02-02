@@ -83,21 +83,31 @@
     </section>
 
     <section aria-labelledby="repondre">
-      <h3 id="repondre">Répondre</h3>
-      <form action="#" method="post">
-        <div>
-          <label for="pseudo">Pseudo</label>
-          <input id="pseudo" name="pseudo" type="text" />
-        </div>
-        <div>
-          <label for="message">Message</label>
-          <textarea id="message" name="message" rows="6" cols="60"></textarea>
-        </div>
-        <div>
-          <button type="submit">Publier</button>
-        </div>
-      </form>
-    </section>
+        <h3 id="repondre">Répondre</h3>
+
+        <form action="#" method="get">
+
+          <div>
+            <label for="pseudo">Pseudo </label>
+            <input id="pseudo" name="pseudo" type="text" required minlength="3" placeholder="Votre pseudo"
+              oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
+              oninput="this.setCustomValidity('')" />
+          </div>
+
+          <div>
+            <label for="message">Message</label>
+            <textarea id="message" name="message" rows="6" cols="60" required minlength="10"
+              placeholder="Votre message..."
+              oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
+              oninput="this.setCustomValidity('')"></textarea>
+          </div>
+
+          <div>
+            <button type="submit">Publier</button>
+          </div>
+
+        </form>
+      </section>
   </main>
 
   <footer>
