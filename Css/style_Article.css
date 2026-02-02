@@ -7,8 +7,6 @@
   --accent-hover: #9e361c;
   --footer-bg: #344E41;
   --focus-color: #B14020;
-  --table-header: #3A5F3A;
-  --table-row-alt: #F7F7F7;
 }
 
 /* ===== RESET ===== */
@@ -19,8 +17,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -33,17 +30,17 @@ body {
   flex-direction: column;
 }
 
-/* ================= HEADER PRINCIPAL ================= */
+/* ================= HEADER ================= */
 
 body > header {
   background: linear-gradient(#2F4F2F, #3A5F3A);
   color: white;
   text-align: center;
   padding: 4rem 1rem 3rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
 }
 
-body > header p {
+#site-title {
   font-size: 3rem;
   margin-bottom: 1rem;
   font-weight: 700;
@@ -74,22 +71,22 @@ main {
   margin: auto;
 }
 
-/* ================= SUJET ================= */
+/* ================= ARTICLE ================= */
 
 #sujet {
   background-color: var(--bg-card);
   border-radius: 16px;
   padding: 2rem;
   margin-bottom: 3rem;
-  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
-#sujet header h2 {
+#post-title {
   font-size: 2rem;
   margin-bottom: 0.5rem;
 }
 
-#sujet header p {
+#post-meta {
   font-size: 0.9rem;
   color: var(--text-muted);
   margin-bottom: 1.5rem;
@@ -99,84 +96,32 @@ main {
   margin-bottom: 1rem;
 }
 
-/* ================= TABLEAU ================= */
-
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2rem 0;
-  border-radius: 12px;
-  overflow: hidden;
-  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
-  font-size: 0.95rem;
-}
-
-thead {
-  background-color: var(--table-header);
-  color: white;
-}
-
-th, td {
-  padding: 0.9rem 1rem;
-  text-align: left;
-}
-
-th {
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  font-size: 0.85rem;
-}
-
-tbody tr:nth-child(even) {
-  background-color: var(--table-row-alt);
-}
-
-tbody tr:hover {
-  background-color: rgba(177, 64, 32, 0.08);
-  transition: background-color 0.2s ease;
-}
-
-td strong {
-  color: var(--accent);
-}
-
-/* Responsive tableau */
-
-@media (max-width: 600px) {
-  table {
-    font-size: 0.85rem;
-  }
-
-  th, td {
-    padding: 0.6rem;
-  }
-}
-
 /* ================= COMMENTAIRES ================= */
 
-section[aria-labelledby="commentaires"] {
-  margin-bottom: 3rem;
+section[aria-labelledby="commentaires-title"] {
   display: flex;
   flex-direction: column;
   gap: 1rem;
+  margin-bottom: 3rem;
 }
 
-section[aria-labelledby="commentaires"] > h3 {
+#commentaires-title {
   font-size: 1.6rem;
   text-align: center;
+  margin-bottom: 1rem;
 }
 
-/* Chaque commentaire */
+/* Un commentaire */
 
-section[aria-labelledby="commentaires"] > section {
+section[aria-labelledby="commentaires-title"] > section {
   background-color: var(--bg-card);
   border-radius: 10px;
   padding: 1rem 1.2rem;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.06);
   border-left: 4px solid var(--accent);
 }
 
-section[aria-labelledby="commentaires"] header p {
+section[aria-labelledby="commentaires-title"] header p {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
@@ -184,32 +129,32 @@ section[aria-labelledby="commentaires"] header p {
   margin-bottom: 0.4rem;
 }
 
-section[aria-labelledby="commentaires"] header strong,
-section[aria-labelledby="commentaires"] header time {
+section[aria-labelledby="commentaires-title"] strong,
+section[aria-labelledby="commentaires-title"] time {
   color: var(--accent);
 }
 
-section[aria-labelledby="commentaires"] > section > p {
-  font-size: 0.95rem;
+section[aria-labelledby="commentaires-title"] > section > p {
   color: var(--text-muted);
 }
 
 /* ================= FORMULAIRE ================= */
 
-section[aria-labelledby="repondre"] {
+section[aria-labelledby="reply-title"] {
   margin-top: 2rem;
 }
 
-section[aria-labelledby="repondre"] h3 {
+#reply-title {
   text-align: center;
   margin-bottom: 1rem;
+  font-size: 1.4rem;
 }
 
 form {
   background-color: var(--bg-card);
   padding: 2rem;
   border-radius: 16px;
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
 }
 
 form div {
@@ -229,6 +174,10 @@ textarea {
   border: 1px solid #ccc;
   font-family: inherit;
   font-size: 1rem;
+}
+
+small {
+  color: var(--text-muted);
 }
 
 input:focus,
@@ -269,11 +218,11 @@ footer {
 
 @media (max-width: 768px) {
 
-  body > header p {
+  #site-title {
     font-size: 2rem;
   }
 
-  #sujet header h2 {
+  #post-title {
     font-size: 1.5rem;
   }
 
