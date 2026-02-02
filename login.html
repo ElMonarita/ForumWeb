@@ -9,31 +9,55 @@
 </head>
 
 <body>
+  <header role="banner">
+        <p>Welcome to the world of Bonobo</p>
+    </header>
   <main>
     <h1>Connexion</h1>
 
-    <form action="/login" method="post">
-      <p>
-        <label for="email">Email</label><br />
-        <input type="email" id="email" name="email" autocomplete="username" required />
-      </p>
+<form action="/Web/AccessibilitéWeb/index.html" method="get">
 
-      <p>
-        <label for="password">Mot de passe</label><br />
-        <input type="password" id="password" name="password" autocomplete="current-password" required />
-      </p>
+  <p>
+    <label for="email">Email</label>
+    <input 
+      type="email"
+      id="email"
+      name="email"
+      autocomplete="username"
+      required
+      placeholder="exemple@email.com"
+      oninvalid="this.setCustomValidity('Veuillez entrer un email valide')"
+      oninput="this.setCustomValidity('')"
+    />
+  </p>
 
-      <p>
-        <button type="submit">Se connecter</button>
-      </p>
-    </form>
+  <p>
+    <label for="password">Mot de passe </label>
+    <input 
+      type="password"
+      id="password"
+      name="password"
+      autocomplete="current-password"
+      required
+      minlength="6"
+      placeholder="Au moins 6 caractères"
+      oninvalid="this.setCustomValidity('Veuillez entrer un mot de passe d’au moins 6 caractères')"
+      oninput="this.setCustomValidity('')"
+    />
+  </p>
+
+  <p>
+    <button type="submit">Se connecter</button>
+  </p>
+
+</form>
 
     <p>
-      <a href="/forgot-password">Mot de passe oublié ?</a>
+      <a href="#">Mot de passe oublié ?</a>
     </p>
 
     <p>
-      Pas de compte ? <a href="/register">Créer un compte</a>
+      Pas de compte ? <a href="#">Créer un compte</a>
     </p>
   </main>
 </body>

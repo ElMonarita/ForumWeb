@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Welcome to the world of Bonobo</h1>
+    <p>Welcome to the world of Bonobo</p>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="login.html">Login</a>
@@ -35,41 +35,50 @@
         <table>
           <thead>
             <tr>
-              <th>Catégorie d’aliments</th>
-              <th>% des observations</th>
+              <th scope="col">Catégorie d’aliments</th>
+              <th scope="col">% des observations</th>
+              <th scope="col">Exemples d’aliments consommés</th>
             </tr>
           </thead>
           <tbody>
             <tr>
-              <td>Fruits mûrs</td>
-              <td>53,6 %</td>
+              <th scope="row">Fruits mûrs</th>
+              <td><strong>53,6 %</strong></td>
+              <td>Figues, mangues sauvages, fruits de lianes, fruits de palmiers</td>
             </tr>
             <tr>
-              <td>Graines sèches (graines d’arbres)</td>
-              <td>36,0 %</td>
+              <th scope="row">Graines sèches (graines d’arbres)</th>
+              <td><strong>36,0 %</strong></td>
+              <td>Graines de Dialium, Irvingia, Panda, Anonidium</td>
             </tr>
             <tr>
-              <td>Végétation herbacée terrestre (THV : pétioles, moelle, herbes, etc.)</td>
-              <td>4,4 %</td>
+              <th scope="row">Végétation herbacée terrestre (THV)</th>
+              <td><strong>4,4 %</strong></td>
+              <td>Moelle de tiges, pétioles, herbes, plantes de sous-bois</td>
             </tr>
             <tr>
-              <td>Jeunes feuilles arboricoles</td>
-              <td>3,2 %</td>
+              <th scope="row">Jeunes feuilles arboricoles</th>
+              <td><strong>3,2 %</strong></td>
+              <td>Feuilles tendres d’arbres et de lianes</td>
             </tr>
             <tr>
-              <td>Champignons (truffes)</td>
-              <td>1,4 %</td>
+              <th scope="row">Champignons (truffes)</th>
+              <td><strong>1,4 %</strong></td>
+              <td>Champignons souterrains</td>
             </tr>
             <tr>
-              <td>Bois mort (liane)</td>
-              <td>0,9 %</td>
+              <th scope="row">Bois mort (liane)</th>
+              <td><strong>0,9 %</strong></td>
+              <td>Parties ligneuses de lianes en décomposition</td>
             </tr>
             <tr>
-              <td>Aliment non identifié</td>
-              <td>0,3 %</td>
+              <th scope="row">Aliment non identifié</th>
+              <td><strong>0,3 %</strong></td>
+              <td>Non déterminé</td>
             </tr>
           </tbody>
         </table>
+
 
         <p>
           Est-ce que ça vous est déjà arrivé ? Des pistes pour diagnostiquer (température,
@@ -77,18 +86,15 @@
         </p>
       </section>
 
-      <footer>
-        <p><strong>Réponses :</strong> 3</p>
-      </footer>
     </article>
 
     <section aria-labelledby="commentaires">
       <h3 id="commentaires">Commentaires</h3>
 
-      <article>
+      <section>
         <header>
           <p>
-            <strong>Camille</strong> — <time datetime="2026-01-29T10:12">10:12</time>
+            <strong>Camille</strong> - <time datetime="2026-01-29T10:12">10:12</time>
           </p>
         </header>
         <p>
@@ -96,24 +102,39 @@
           températures (CPU/GPU) et écouter si les ventilateurs s’emballent juste avant le
           redémarrage.
         </p>
-      </article>
+      </section>
+
+      <section>
+        <header>
+          <p>
+            <strong>Pedro</strong> - <time datetime="2026-01-29T10:12">10:12</time>
+          </p>
+        </header>
+        <p>
+          Merci pour le partage de ce tableau, c’est très intéressant. On voit bien que
+          l’alimentation des bonobos est majoritairement composée de fruits et de graines,
+          ce qui confirme leur régime essentiellement frugivore, tout en restant assez varié.
+          J’apprécie le fait que tu aies inclus des catégories moins connues comme les champignons
+          ou le bois mort, ça montre à quel point leur alimentation est plus diversifiée qu’on ne l’imagine souvent.
+        </p>
+      </section>
 
     </section>
 
     <section aria-labelledby="repondre">
       <h3 id="repondre">Répondre</h3>
       <form action="#" method="post">
-        <p>
-          <label for="pseudo">Pseudo</label><br />
+        <div>
+          <label for="pseudo">Pseudo</label>
           <input id="pseudo" name="pseudo" type="text" />
-        </p>
-        <p>
-          <label for="message">Message</label><br />
+        </div>
+        <div>
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" cols="60"></textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <button type="submit">Publier</button>
-        </p>
+        </div>
       </form>
     </section>
   </main>

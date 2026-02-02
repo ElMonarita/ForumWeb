@@ -4,12 +4,15 @@
   --text-main: #2F4F2F;
   --text-muted: #5F6F52;
   --accent: #B14020;
-  --accent-hover: #B14020;
+  --accent-hover: #9e361c;
   --footer-bg: #344E41;
   --focus-color: #B14020;
+  --table-header: #3A5F3A;
+  --table-row-alt: #F7F7F7;
 }
 
-/* Reset */
+/* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -30,20 +33,20 @@ body {
   flex-direction: column;
 }
 
-/* ===== HEADER ===== */
+/* ================= HEADER PRINCIPAL ================= */
 
-header {
-  background: linear-gradient(#2F4F2F,
-      #3A5F3A);
+body > header {
+  background: linear-gradient(#2F4F2F, #3A5F3A);
   color: white;
   text-align: center;
   padding: 4rem 1rem 3rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
-header h1 {
+body > header p {
   font-size: 3rem;
   margin-bottom: 1rem;
+  font-weight: 700;
 }
 
 nav {
@@ -55,7 +58,6 @@ nav {
 nav a {
   color: white;
   text-decoration: none;
-  margin: 0 1rem;
   font-weight: 600;
 }
 
@@ -63,7 +65,7 @@ nav a:hover {
   text-decoration: underline;
 }
 
-/* ===== MAIN ===== */
+/* ================= MAIN ================= */
 
 main {
   flex: 1;
@@ -72,9 +74,9 @@ main {
   margin: auto;
 }
 
-/* ===== POST PRINCIPAL ===== */
+/* ================= SUJET ================= */
 
-main>article {
+#sujet {
   background-color: var(--bg-card);
   border-radius: 16px;
   padding: 2rem;
@@ -82,65 +84,136 @@ main>article {
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
 }
 
-main>article h2 {
-  margin-bottom: 0.5rem;
+#sujet header h2 {
   font-size: 2rem;
+  margin-bottom: 0.5rem;
 }
 
-main>article header p {
+#sujet header p {
   font-size: 0.9rem;
-  color: var(--bg-card);
+  color: var(--text-muted);
   margin-bottom: 1.5rem;
 }
 
-main>article section p {
+#sujet section p {
   margin-bottom: 1rem;
 }
 
-/* ===== COMMENTAIRES COMPACTS ===== */
+/* ================= TABLEAU ================= */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2rem 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.08);
+  font-size: 0.95rem;
+}
+
+thead {
+  background-color: var(--table-header);
+  color: white;
+}
+
+th, td {
+  padding: 0.9rem 1rem;
+  text-align: left;
+}
+
+th {
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  font-size: 0.85rem;
+}
+
+tbody tr:nth-child(even) {
+  background-color: var(--table-row-alt);
+}
+
+tbody tr:hover {
+  background-color: rgba(177, 64, 32, 0.08);
+  transition: background-color 0.2s ease;
+}
+
+td strong {
+  color: var(--accent);
+}
+
+/* Responsive tableau */
+
+@media (max-width: 600px) {
+  table {
+    font-size: 0.85rem;
+  }
+
+  th, td {
+    padding: 0.6rem;
+  }
+}
+
+/* ================= COMMENTAIRES ================= */
 
 section[aria-labelledby="commentaires"] {
   margin-bottom: 3rem;
   display: flex;
   flex-direction: column;
-  gap: 0.8rem;
+  gap: 1rem;
 }
 
-section h3 {
-  font-size: 1.5rem;
-  margin-bottom: 1rem;
+section[aria-labelledby="commentaires"] > h3 {
+  font-size: 1.6rem;
   text-align: center;
 }
 
-section[aria-labelledby="commentaires"] article {
+/* Chaque commentaire */
+
+section[aria-labelledby="commentaires"] > section {
   background-color: var(--bg-card);
   border-radius: 10px;
-  padding: 0.9rem 1.1rem;
+  padding: 1rem 1.2rem;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.06);
   border-left: 4px solid var(--accent);
 }
 
-section[aria-labelledby="commentaires"] article header p {
+section[aria-labelledby="commentaires"] header p {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
-  font-size: 0.85rem;
-  margin-bottom: 0.3rem;
-}
-
-section[aria-labelledby="commentaires"] article p {
   font-size: 0.9rem;
-  color: var(--text-muted);
-  line-height: 1.4;
+  margin-bottom: 0.4rem;
 }
 
-/* ===== FORMULAIRE ===== */
+section[aria-labelledby="commentaires"] header strong,
+section[aria-labelledby="commentaires"] header time {
+  color: var(--accent);
+}
+
+section[aria-labelledby="commentaires"] > section > p {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+}
+
+/* ================= FORMULAIRE ================= */
+
+section[aria-labelledby="repondre"] {
+  margin-top: 2rem;
+}
+
+section[aria-labelledby="repondre"] h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+}
 
 form {
   background-color: var(--bg-card);
   padding: 2rem;
   border-radius: 16px;
   box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+}
+
+form div {
+  margin-bottom: 1rem;
 }
 
 label {
@@ -164,10 +237,9 @@ textarea:focus {
   border-color: var(--focus-color);
 }
 
-/* ===== BOUTON ===== */
+/* ================= BOUTON ================= */
 
 button {
-  margin-top: 1rem;
   padding: 0.7rem 1.6rem;
   border-radius: 25px;
   background-color: var(--accent);
@@ -183,7 +255,7 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* ===== FOOTER ===== */
+/* ================= FOOTER ================= */
 
 footer {
   background-color: var(--footer-bg);
@@ -193,28 +265,20 @@ footer {
   font-size: 0.9rem;
 }
 
-/* ===== RESPONSIVE ===== */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 768px) {
 
-  header h1 {
+  body > header p {
     font-size: 2rem;
+  }
+
+  #sujet header h2 {
+    font-size: 1.5rem;
   }
 
   main {
     padding: 2rem 1rem;
   }
 
-}
-
-section[aria-labelledby="commentaires"] article header strong {
-  color: var(--accent);
-}
-
-section[aria-labelledby="commentaires"] article header p {
-  color: var(--accent);
-}
-
-section[aria-labelledby="commentaires"] article header time {
-  color: var(--accent);
 }

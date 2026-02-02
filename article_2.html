@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Welcome to the world of Bonobo</h1>
+    <p>Welcome to the world of Bonobo</p>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="login.html">Login</a>
@@ -20,7 +20,7 @@
   <main>
     <article id="sujet">
       <header>
-        <h2>Un mode de vie basé sur la coopération</h2>
+        <h2>Un mode de vie basé sur la cooaération</h2>
         <p>
           <strong>Auteur :</strong> Alex |
           <strong>Date :</strong> 29 janvier 2026 |
@@ -43,42 +43,52 @@
           Si seulement les Humains pouvaient prendre exemple sur eux.
         </p>
       </section>
-
-      <footer>
-        <p><strong>Réponses :</strong> 3</p>
-      </footer>
     </article>
 
     <section aria-labelledby="commentaires">
       <h3 id="commentaires">Commentaires</h3>
 
-      <article>
+      <section>
         <header>
           <p>
-            <strong>Camille</strong> — <time datetime="2026-01-29T10:12">10:12</time>
+            <strong>Camille</strong> - <time datetime="2026-01-29T10:12">10:12</time>
           </p>
         </header>
         <p>
           Ouhouhahahah
         </p>
-      </article>
+      </section>
+      <section>
+        <header>
+          <p>
+            <strong>Pedro</strong> - <time datetime="2026-01-29T10:12">10:12</time>
+          </p>
+        </header>
+        <p>
+          Très beau texte, à la fois clair et inspirant. Tu mets bien en évidence ce qui rend les bonobos uniques, 
+          surtout leur manière pacifique de gérer les relations sociales. J’aime particulièrement l’accent mis sur 
+          le rôle des femelles et sur l’empathie, car ça montre qu’il existe dans la nature des modèles de société 
+          très différents de ceux basés sur la domination. Ça donne matière à réfléchir sur nos propres modes de 
+          vie. Bravo pour ce partage !
+        </p>
+      </section>
 
     </section>
 
     <section aria-labelledby="repondre">
       <h3 id="repondre">Répondre</h3>
       <form action="#" method="post">
-        <p>
-          <label for="pseudo">Pseudo</label><br />
+        <div>
+          <label for="pseudo">Pseudo</label>
           <input id="pseudo" name="pseudo" type="text" />
-        </p>
-        <p>
-          <label for="message">Message</label><br />
+        </div>
+        <div>
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" cols="60"></textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <button type="submit">Publier</button>
-        </p>
+        </div>
       </form>
     </section>
   </main>

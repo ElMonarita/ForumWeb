@@ -10,7 +10,7 @@
 
 <body>
   <header>
-    <h1>Welcome to the world of Bonobo</h1>
+    <p>Welcome to the world of Bonobo</p>
     <nav>
       <a href="index.html">Accueil</a>
       <a href="login.html">Login</a>
@@ -40,53 +40,49 @@
           Vous aussi venez aider les bonobos à se defendre contre les envahisseurs.
         </p>
       </section>
-
-      <footer>
-        <p><strong>Réponses :</strong> 3</p>
-      </footer>
     </article>
 
     <section aria-labelledby="commentaires">
       <h3 id="commentaires">Commentaires</h3>
 
-      <article>
+      <section>
         <header>
           <p>
-            <strong>Alice</strong> — <time datetime="2026-01-29T10:12">10:12</time>
+            <strong>Alice</strong> - <time datetime="2026-01-29T10:12">10:12</time>
           </p>
         </header>
         <p>
           A bas les braconiers, vive les bonobos
         </p>
-      </article>
+      </section>
 
-      <article>
+      <section>
         <header>
           <p>
-            <strong>Mehdi</strong> — <time datetime="2026-01-29T10:35">10:35</time>
+            <strong>Mehdi</strong> - <time datetime="2026-01-29T10:35">10:35</time>
           </p>
         </header>
         <p>
           Ouhouhahahah
         </p>
-      </article>
+      </section>
 
     </section>
 
     <section aria-labelledby="repondre">
       <h3 id="repondre">Répondre</h3>
       <form action="#" method="post">
-        <p>
-          <label for="pseudo">Pseudo</label><br />
+        <div>
+          <label for="pseudo">Pseudo</label>
           <input id="pseudo" name="pseudo" type="text" />
-        </p>
-        <p>
-          <label for="message">Message</label><br />
+        </div>
+        <div>
+          <label for="message">Message</label>
           <textarea id="message" name="message" rows="6" cols="60"></textarea>
-        </p>
-        <p>
+        </div>
+        <div>
           <button type="submit">Publier</button>
-        </p>
+        </div>
       </form>
     </section>
   </main>

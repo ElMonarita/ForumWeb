@@ -1,21 +1,15 @@
-/* ============================
-   VARIABLES (reprises telles quelles)
-============================ */
-
 :root {
   --bg-main: #F2E8CF;
   --bg-card: #ffffff;
   --text-main: #2F4F2F;
   --text-muted: #5F6F52;
   --accent: #B14020;
-  --accent-hover: #B14020;
+  --accent-hover: #9e361c;
   --footer-bg: #344E41;
   --focus-color: #B14020;
 }
 
-/* ============================
-   RESET
-============================ */
+/* ================= RESET ================= */
 
 * {
   margin: 0;
@@ -23,8 +17,7 @@
   box-sizing: border-box;
 }
 
-html,
-body {
+html, body {
   height: 100%;
 }
 
@@ -33,70 +26,85 @@ body {
   background-color: var(--bg-main);
   color: var(--text-main);
   display: flex;
-  align-items: center;
-  justify-content: center;
+  flex-direction: column;
 }
 
-/* ============================
-   MAIN (carte login)
-============================ */
+/* ================= HEADER ================= */
+
+header {
+  background: linear-gradient(#2F4F2F, #3A5F3A);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem 2.5rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header p {
+  font-size: 2.5rem;
+  font-weight: 700;
+}
+
+/* ================= MAIN ================= */
 
 main {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 1rem;
+}
+
+/* ================= CARTE LOGIN ================= */
+
+main > h1 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+}
+
+form {
   background-color: var(--bg-card);
   width: 100%;
   max-width: 420px;
   padding: 3rem 2.5rem;
   border-radius: 18px;
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.12);
 }
 
-/* ============================
-   TITRE
-============================ */
-
-main h1 {
-  text-align: center;
-  margin-bottom: 2rem;
-  font-size: 2rem;
-}
-
-/* ============================
-   FORMULAIRE
-============================ */
+/* ================= CHAMPS ================= */
 
 form p {
-  margin-bottom: 1.5rem;
+  margin-bottom: 1.4rem;
 }
 
 label {
   font-weight: 600;
   display: block;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.4rem;
 }
 
 input {
   width: 100%;
-  padding: 0.7rem 0.8rem;
-  border-radius: 8px;
+  padding: 0.7rem 0.9rem;
+  border-radius: 10px;
   border: 1px solid #ccc;
   font-size: 1rem;
   font-family: inherit;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
 }
 
 input:focus {
   outline: none;
   border-color: var(--focus-color);
-  box-shadow: 0 0 0 3px rgba(255, 153, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(177,64,32,0.25);
 }
 
-/* ============================
-   BOUTON
-============================ */
+/* ================= BOUTON ================= */
 
 button {
   width: 100%;
   padding: 0.8rem;
-  border-radius: 25px;
+  border-radius: 30px;
   border: none;
   background-color: var(--accent);
   color: white;
@@ -108,7 +116,7 @@ button {
 
 button:hover {
   background-color: var(--accent-hover);
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 button:focus {
@@ -116,15 +124,13 @@ button:focus {
   outline-offset: 3px;
 }
 
-/* ============================
-   LIENS
-============================ */
+/* ================= LIENS ================= */
 
-main>p {
-  text-align: center;
+main > p {
   margin-top: 1rem;
   font-size: 0.95rem;
   color: var(--text-muted);
+  text-align: center;
 }
 
 a {
@@ -142,16 +148,20 @@ a:focus {
   outline-offset: 3px;
 }
 
-/* ============================
-   RESPONSIVE
-============================ */
+/* ================= RESPONSIVE ================= */
 
 @media (max-width: 480px) {
-  main {
+
+  header p {
+    font-size: 1.8rem;
+  }
+
+  main > h1 {
+    font-size: 1.6rem;
+  }
+
+  form {
     padding: 2rem 1.5rem;
   }
 
-  main h1 {
-    font-size: 1.6rem;
-  }
 }
