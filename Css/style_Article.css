@@ -30,6 +30,21 @@ body {
   flex-direction: column;
 }
 
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
 /* ================= HEADER ================= */
 
 body > header {
@@ -148,7 +163,7 @@ th[scope="row"] {
 
 /* ================= COMMENTAIRES ================= */
 
-section[aria-labelledby="commentaires-title"] {
+main > section {
   display: flex;
   flex-direction: column;
   gap: 1rem;
@@ -163,7 +178,7 @@ section[aria-labelledby="commentaires-title"] {
 
 /* Un commentaire */
 
-section[aria-labelledby="commentaires-title"] > section {
+main > section > article {
   background-color: var(--bg-card);
   border-radius: 10px;
   padding: 1rem 1.2rem;
@@ -171,7 +186,7 @@ section[aria-labelledby="commentaires-title"] > section {
   border-left: 4px solid var(--accent);
 }
 
-section[aria-labelledby="commentaires-title"] header p {
+main > section > article header p {
   display: flex;
   justify-content: space-between;
   font-weight: 600;
@@ -179,14 +194,15 @@ section[aria-labelledby="commentaires-title"] header p {
   margin-bottom: 0.4rem;
 }
 
-section[aria-labelledby="commentaires-title"] strong,
-section[aria-labelledby="commentaires-title"] time {
+main > section > article strong,
+main > section > article time {
   color: var(--accent);
 }
 
-section[aria-labelledby="commentaires-title"] > section > p {
+main > section > article > p {
   color: var(--text-muted);
 }
+
 
 /* ================= FORMULAIRE ================= */
 

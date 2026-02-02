@@ -1,0 +1,153 @@
+:root {
+  --bg-main: #F2E8CF;
+  --bg-card: #ffffff;
+  --text-main: #2F4F2F;
+  --text-muted: #5F6F52;
+  --accent: #B14020;
+  --accent-hover: #9e361c;
+  --focus-color: #B14020;
+}
+
+/* ================= RESET ================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+}
+
+body {
+  font-family: "Segoe UI", Arial, sans-serif;
+  background-color: var(--bg-main);
+  color: var(--text-main);
+  line-height: 1.6;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ================= SKIP LINK ================= */
+
+.skip-link {
+  position: absolute;
+  left: -9999px;
+}
+
+.skip-link:focus {
+  left: 10px;
+  top: 10px;
+  background: black;
+  color: white;
+  padding: 8px 12px;
+  z-index: 1000;
+  text-decoration: none;
+}
+
+/* ================= HEADER ================= */
+
+header {
+  background: linear-gradient(#2F4F2F, #3A5F3A);
+  color: white;
+  text-align: center;
+  padding: 3rem 1rem;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+header p {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin: 1rem 0;
+}
+
+.logo {
+  height: 70px;
+}
+
+/* ================= NAV ================= */
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: 600;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* ================= MAIN ================= */
+
+main {
+  flex: 1;
+  padding: 3rem 1rem;
+  display: flex;
+  justify-content: center;
+}
+
+/* ================= SITE MAP LIST ================= */
+
+main ul {
+  background: var(--bg-card);
+  padding: 2rem 3rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  list-style: none;
+  min-width: 280px;
+}
+
+main li {
+  margin: 0.6rem 0;
+  font-size: 1.05rem;
+}
+
+/* Sous-listes */
+
+main li ul {
+  margin-top: 0.5rem;
+  margin-left: 1.5rem;
+  padding-left: 1rem;
+  border-left: 3px solid var(--accent);
+}
+
+/* ================= LINKS ================= */
+
+main a {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+main a:hover {
+  text-decoration: underline;
+}
+
+/* ================= ACCESSIBILITÉ ================= */
+
+a:focus {
+  outline: 3px solid var(--focus-color);
+  outline-offset: 3px;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+
+  header p {
+    font-size: 1.8rem;
+  }
+
+  main ul {
+    padding: 2rem;
+  }
+}

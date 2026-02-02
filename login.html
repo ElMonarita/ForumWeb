@@ -9,85 +9,92 @@
 </head>
 
 <body>
+  <a href="#login-title" class="skip-link">Aller au contenu de connexion</a>
+  <header>
+    <img aria-hidden="true" src="Images/Logo.jpg" class="logo">
+    <p id="site-title">Welcome to the world of Bonobo</p>
+    <nav aria-label="Navigation principale">
+      <a href="index.html">Accueil</a>
+      <a href="login.html">Connexion</a>
+    </nav>
+  </header>
 
-<header>
-  <img aria-hidden= "true" src="../Images/Logo.jpg" class="logo">
-  <p id="site-title">Welcome to the world of Bonobo</p>
-</header>
+  <main>
 
-<main>
+    <h1 id="login-title">Connexion</h1>
 
-  <h1 id="login-title">Connexion</h1>
+    <form action="/ForumWeb/index.html" method="get" aria-describedby="form-help">
 
-  <form action="/ForumWeb/index.html" method="get" aria-describedby="form-help">
+      <p id="form-help">
+        Veuillez renseigner votre email et votre mot de passe pour vous connecter.
+      </p>
 
-    <p id="form-help">
-      Veuillez renseigner votre email et votre mot de passe pour vous connecter.
+      <p>
+        <label for="email">Email *</label>
+
+        <input type="email" id="email" name="email" autocomplete="username" required placeholder="exemple@email.com"
+          aria-describedby="email-help" oninvalid="this.setCustomValidity('Veuillez entrer un email valide')"
+          oninput="this.setCustomValidity('')" />
+
+        <small id="email-help">
+          Exemple : nom@domaine.com
+        </small>
+      </p>
+
+      <p>
+        <label for="password">Mot de passe *</label>
+
+        <input type="password" id="password" name="password" autocomplete="current-password" required minlength="6"
+          placeholder="Au moins 6 caractères" aria-describedby="password-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un mot de passe d’au moins 6 caractères')"
+          oninput="this.setCustomValidity('')" />
+
+        <button type="button" id="togglePassword">
+          Afficher
+        </button>
+
+        <small id="password-help">
+          Minimum 6 caractères.
+        </small>
+      </p>
+
+      <p>
+        <button type="submit">
+          Se connecter
+        </button>
+      </p>
+
+    </form>
+
+    <p>
+      <a href="#">
+        Mot de passe oublié ?
+      </a>
     </p>
 
     <p>
-      <label for="email">Email *</label>
-
-      <input 
-        type="email"
-        id="email"
-        name="email"
-        autocomplete="username"
-        required
-        placeholder="exemple@email.com"
-        aria-describedby="email-help"
-        oninvalid="this.setCustomValidity('Veuillez entrer un email valide')"
-        oninput="this.setCustomValidity('')"
-      />
-
-      <small id="email-help">
-        Exemple : nom@domaine.com
-      </small>
+      Pas de compte ?
+      <a href="#">
+        Créer un compte
+      </a>
     </p>
 
-    <p>
-      <label for="password">Mot de passe *</label>
-
-      <input 
-        type="password"
-        id="password"
-        name="password"
-        autocomplete="current-password"
-        required
-        minlength="6"
-        placeholder="Au moins 6 caractères"
-        aria-describedby="password-help"
-        oninvalid="this.setCustomValidity('Veuillez entrer un mot de passe d’au moins 6 caractères')"
-        oninput="this.setCustomValidity('')"
-      />
-
-      <small id="password-help">
-        Minimum 6 caractères.
-      </small>
-    </p>
-
-    <p>
-      <button type="submit">
-        Se connecter
-      </button>
-    </p>
-
-  </form>
-
-  <p>
-    <a href="#">
-      Mot de passe oublié ?
-    </a>
-  </p>
-
-  <p>
-    Pas de compte ?
-    <a href="#">
-      Créer un compte
-    </a>
-  </p>
-
-</main>
+  </main>
 
 </body>
+<script>
+  const passwordInput = document.getElementById("password");
+  const toggleButton = document.getElementById("togglePassword");
+
+  toggleButton.addEventListener("click", function () {
+    if (passwordInput.type === "password") {
+      passwordInput.type = "text";
+      toggleButton.textContent = "Masquer";
+    } else {
+      passwordInput.type = "password";
+      toggleButton.textContent = "Afficher";
+    }
+  });
+</script>
+
 </html>
