@@ -9,110 +9,164 @@
 </head>
 
 <body>
-  <header>
-    <p>Welcome to the world of Bonobo</p>
-    <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="../login.html">Login</a>
-    </nav>
-  </header>
 
-  <main>
-    <article id="sujet">
+<header>
+  <p id="site-title">Welcome to the world of Bonobo</p>
+
+  <nav aria-labelledby="site-title">
+    <a href="../index.html">Accueil</a>
+    <a href="../login.html">Login</a>
+  </nav>
+</header>
+
+<main>
+
+  <article id="sujet" aria-labelledby="post-title">
+
+    <header>
+      <h2 id="post-title">Une communication riche et variée</h2>
+
+      <p id="post-meta">
+        <strong>Auteur :</strong> Alex |
+        <strong>Date :</strong> 29 janvier 2026 |
+        <strong>Tags :</strong> assistance, matériel
+      </p>
+    </header>
+
+    <section aria-describedby="post-meta">
+
+      <p>
+        Les bonobos possèdent une communication riche et variée qui joue un rôle essentiel dans leur vie sociale. Ils
+        utilisent une large gamme de sons, de gestes et d’expressions faciales pour transmettre des informations,
+        exprimer des émotions ou renforcer les liens entre individus. Un simple regard, une posture ou un cri
+        spécifique peut signaler l’apaisement, l’alerte ou l’envie d’interagir. Cette diversité de moyens de
+        communication leur permet de maintenir une cohésion forte au sein du groupe et de résoudre de nombreuses
+        situations sans recourir à l’agressivité. Grâce à cette capacité d’expression élaborée, les bonobos démontrent
+        une intelligence sociale remarquable et une grande sensibilité aux émotions des autres.
+      </p>
+
+      <p>
+        Ils peuvent en donner au Humains ?
+      </p>
+
+    </section>
+
+  </article>
+
+  <!-- COMMENTAIRES -->
+
+  <section aria-labelledby="commentaires-title">
+
+    <h3 id="commentaires-title">Commentaires</h3>
+
+    <section aria-labelledby="comment1-author">
       <header>
-        <h2>Une communication riche et variée</h2>
-        <p>
-          <strong>Auteur :</strong> Alex |
-          <strong>Date :</strong> 29 janvier 2026 |
-          <strong>Tags :</strong> assistance, matériel
+        <p id="comment1-author">
+          <strong>Camille</strong> -
+          <time datetime="2026-01-29T10:12">10:12</time>
         </p>
       </header>
 
-      <section>
-        <p>
-          Les bonobos possèdent une communication riche et variée qui joue un rôle essentiel dans leur vie sociale. Ils
-          utilisent une large gamme de sons, de gestes et d’expressions faciales pour transmettre des informations,
-          exprimer des émotions ou renforcer les liens entre individus. Un simple regard, une posture ou un cri
-          spécifique peut signaler l’apaisement, l’alerte ou l’envie d’interagir. Cette diversité de moyens de
-          communication leur permet de maintenir une cohésion forte au sein du groupe et de résoudre de nombreuses
-          situations sans recourir à l’agressivité. Grâce à cette capacité d’expression élaborée, les bonobos démontrent
-          une intelligence sociale remarquable et une grande sensibilité aux émotions des autres.
-        </p>
-        <p>
-          Ils peuvent en donner au Humains ?
-        </p>
-      </section>
-    </article>
-
-    <section aria-labelledby="commentaires">
-      <h3 id="commentaires">Commentaires</h3>
-
-      <section>
-        <header>
-          <p>
-            <strong>Camille</strong> - <time datetime="2026-01-29T10:12">10:12</time>
-          </p>
-        </header>
-        <p>
-          Je ne crois pas, vue qu'ils sont dans des zoo.
-        </p>
-      </section>
-
-      <section>
-        <header>
-          <p>
-            <strong>Mehdi</strong> - <time datetime="2026-01-29T10:35">10:35</time>
-          </p>
-        </header>
-        <p>
-          Ouhouhahahah
-        </p>
-      </section>
-
-      <section>
-        <header>
-          <p>
-            <strong>Sophie</strong> - <time datetime="2026-01-29T11:02">11:02</time>
-          </p>
-        </header>
-        <p>
-          Si tu as récemment changé quelque chose (RAM, disque, pilote), tente un démarrage
-          en mode sans échec. Et si possible, essaie une autre prise / multiprise.
-        </p>
-      </section>
+      <p>
+        Je ne crois pas, vue qu'ils sont dans des zoo.
+      </p>
     </section>
 
-    <section aria-labelledby="repondre">
-        <h3 id="repondre">Répondre</h3>
+    <section aria-labelledby="comment2-author">
+      <header>
+        <p id="comment2-author">
+          <strong>Mehdi</strong> -
+          <time datetime="2026-01-29T10:35">10:35</time>
+        </p>
+      </header>
 
-        <form action="#" method="get">
+      <p>
+        Ouhouhahahah
+      </p>
+    </section>
 
-          <div>
-            <label for="pseudo">Pseudo </label>
-            <input id="pseudo" name="pseudo" type="text" required minlength="3" placeholder="Votre pseudo"
-              oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
-              oninput="this.setCustomValidity('')" />
-          </div>
+    <section aria-labelledby="comment3-author">
+      <header>
+        <p id="comment3-author">
+          <strong>Sophie</strong> -
+          <time datetime="2026-01-29T11:02">11:02</time>
+        </p>
+      </header>
 
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" cols="60" required minlength="10"
-              placeholder="Votre message..."
-              oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
-              oninput="this.setCustomValidity('')"></textarea>
-          </div>
+      <p>
+        Si tu as récemment changé quelque chose (RAM, disque, pilote), tente un démarrage
+        en mode sans échec. Et si possible, essaie une autre prise / multiprise.
+      </p>
+    </section>
 
-          <div>
-            <button type="submit">Publier</button>
-          </div>
+  </section>
 
-        </form>
-      </section>
-  </main>
+  <!-- FORMULAIRE -->
 
-  <footer>
-        <a>© 2026 - Bonobo Factory</a>
-  </footer>
+  <section aria-labelledby="reply-title">
+
+    <h3 id="reply-title">Répondre</h3>
+
+    <form action="#" method="get" aria-describedby="form-help">
+
+      <p id="form-help">
+        Tous les champs sont obligatoires.
+      </p>
+
+      <div>
+        <label for="pseudo">Pseudo</label>
+
+        <input
+          id="pseudo"
+          name="pseudo"
+          type="text"
+          required
+          minlength="3"
+          placeholder="Votre pseudo"
+          aria-describedby="pseudo-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
+          oninput="this.setCustomValidity('')" />
+
+        <small id="pseudo-help">
+          Minimum 3 caractères.
+        </small>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          cols="60"
+          required
+          minlength="10"
+          placeholder="Votre message..."
+          aria-describedby="message-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
+          oninput="this.setCustomValidity('')"></textarea>
+
+        <small id="message-help">
+          Minimum 10 caractères.
+        </small>
+      </div>
+
+      <div>
+        <button type="submit" aria-label="Publier le commentaire">
+          Publier
+        </button>
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p aria-hidden="true">© 2026 - Bonobo Factory</p>
+</footer>
+
 </body>
-
 </html>

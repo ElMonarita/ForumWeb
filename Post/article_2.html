@@ -9,103 +9,155 @@
 </head>
 
 <body>
-  <header>
-    <p>Welcome to the world of Bonobo</p>
-    <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="../login.html">Login</a>
-    </nav>
-  </header>
 
-  <main>
-    <article id="sujet">
-      <header>
-        <h2>Un mode de vie basé sur la cooaération</h2>
-        <p>
-          <strong>Auteur :</strong> Alex |
-          <strong>Date :</strong> 29 janvier 2026 |
-          <strong>Tags :</strong> assistance, matériel
-        </p>
-      </header>
+<header>
+  <p id="site-title">Welcome to the world of Bonobo</p>
 
-      <section>
-        <p>
-          Les bonobos sont des primates fascinants dont le mode de vie repose largement sur la coopération et l’harmonie
-          sociale. Contrairement à d’autres espèces proches comme les chimpanzés, ils privilégient les relations
-          pacifiques pour résoudre les conflits et maintenir l’équilibre au sein du groupe. La solidarité entre
-          individus se manifeste par le partage de nourriture, l’entraide dans l’éducation des jeunes et des
-          interactions sociales fréquentes qui renforcent les liens. Les femelles jouent un rôle central dans
-          l’organisation sociale, favorisant un climat de tolérance et de respect. Ce modèle de société, fondé sur
-          l’empathie et la collaboration, fait des bonobos un exemple remarquable de coexistence pacifique dans le règne
-          animal.
-        </p>
-        <p>
-          Si seulement les Humains pouvaient prendre exemple sur eux.
-        </p>
-      </section>
-    </article>
+  <nav aria-labelledby="site-title">
+    <a href="../index.html">Accueil</a>
+    <a href="../login.html">Login</a>
+  </nav>
+</header>
 
-    <section aria-labelledby="commentaires">
-      <h3 id="commentaires">Commentaires</h3>
+<main>
 
-      <section>
-        <header>
-          <p>
-            <strong>Camille</strong> - <time datetime="2026-01-29T10:12">10:12</time>
-          </p>
-        </header>
-        <p>
-          Ouhouhahahah
-        </p>
-      </section>
-      <section>
-        <header>
-          <p>
-            <strong>Pedro</strong> - <time datetime="2026-01-29T10:12">10:12</time>
-          </p>
-        </header>
-        <p>
-          Très beau texte, à la fois clair et inspirant. Tu mets bien en évidence ce qui rend les bonobos uniques, 
-          surtout leur manière pacifique de gérer les relations sociales. J’aime particulièrement l’accent mis sur 
-          le rôle des femelles et sur l’empathie, car ça montre qu’il existe dans la nature des modèles de société 
-          très différents de ceux basés sur la domination. Ça donne matière à réfléchir sur nos propres modes de 
-          vie. Bravo pour ce partage !
-        </p>
-      </section>
+  <article id="sujet" aria-labelledby="post-title">
+
+    <header>
+      <h2 id="post-title">Un mode de vie basé sur la coopération</h2>
+
+      <p id="post-meta">
+        <strong>Auteur :</strong> Alex |
+        <strong>Date :</strong> 29 janvier 2026 |
+        <strong>Tags :</strong> assistance, matériel
+      </p>
+    </header>
+
+    <section aria-describedby="post-meta">
+
+      <p>
+        Les bonobos sont des primates fascinants dont le mode de vie repose largement sur la coopération et l’harmonie
+        sociale. Contrairement à d’autres espèces proches comme les chimpanzés, ils privilégient les relations
+        pacifiques pour résoudre les conflits et maintenir l’équilibre au sein du groupe. La solidarité entre
+        individus se manifeste par le partage de nourriture, l’entraide dans l’éducation des jeunes et des
+        interactions sociales fréquentes qui renforcent les liens. Les femelles jouent un rôle central dans
+        l’organisation sociale, favorisant un climat de tolérance et de respect. Ce modèle de société, fondé sur
+        l’empathie et la collaboration, fait des bonobos un exemple remarquable de coexistence pacifique dans le règne
+        animal.
+      </p>
+
+      <p>
+        Si seulement les Humains pouvaient prendre exemple sur eux.
+      </p>
 
     </section>
 
-    <section aria-labelledby="repondre">
-        <h3 id="repondre">Répondre</h3>
+  </article>
 
-        <form action="#" method="get">
+  <!-- COMMENTAIRES -->
 
-          <div>
-            <label for="pseudo">Pseudo </label>
-            <input id="pseudo" name="pseudo" type="text" required minlength="3" placeholder="Votre pseudo"
-              oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
-              oninput="this.setCustomValidity('')" />
-          </div>
+  <section aria-labelledby="commentaires-title">
 
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" cols="60" required minlength="10"
-              placeholder="Votre message..."
-              oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
-              oninput="this.setCustomValidity('')"></textarea>
-          </div>
+    <h3 id="commentaires-title">Commentaires</h3>
 
-          <div>
-            <button type="submit">Publier</button>
-          </div>
+    <section aria-labelledby="comment1-author">
+      <header>
+        <p id="comment1-author">
+          <strong>Camille</strong> -
+          <time datetime="2026-01-29T10:12">10:12</time>
+        </p>
+      </header>
 
-        </form>
-      </section>
-  </main>
+      <p>
+        Ouhouhahahah
+      </p>
+    </section>
 
-  <footer>
-        <a>© 2026 - Bonobo Factory</a>
-  </footer>
+    <section aria-labelledby="comment2-author">
+      <header>
+        <p id="comment2-author">
+          <strong>Pedro</strong> -
+          <time datetime="2026-01-29T10:12">10:12</time>
+        </p>
+      </header>
+
+      <p>
+        Très beau texte, à la fois clair et inspirant. Tu mets bien en évidence ce qui rend les bonobos uniques,
+        surtout leur manière pacifique de gérer les relations sociales. J’aime particulièrement l’accent mis sur
+        le rôle des femelles et sur l’empathie, car ça montre qu’il existe dans la nature des modèles de société
+        très différents de ceux basés sur la domination. Ça donne matière à réfléchir sur nos propres modes de
+        vie. Bravo pour ce partage !
+      </p>
+    </section>
+
+  </section>
+
+  <!-- FORMULAIRE -->
+
+  <section aria-labelledby="reply-title">
+
+    <h3 id="reply-title">Répondre</h3>
+
+    <form action="#" method="get" aria-describedby="form-help">
+
+      <p id="form-help">
+        Tous les champs sont obligatoires.
+      </p>
+
+      <div>
+        <label for="pseudo">Pseudo</label>
+
+        <input
+          id="pseudo"
+          name="pseudo"
+          type="text"
+          required
+          minlength="3"
+          placeholder="Votre pseudo"
+          aria-describedby="pseudo-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
+          oninput="this.setCustomValidity('')" />
+
+        <small id="pseudo-help">
+          Minimum 3 caractères.
+        </small>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          cols="60"
+          required
+          minlength="10"
+          placeholder="Votre message..."
+          aria-describedby="message-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
+          oninput="this.setCustomValidity('')"></textarea>
+
+        <small id="message-help">
+          Minimum 10 caractères.
+        </small>
+      </div>
+
+      <div>
+        <button type="submit" aria-label="Publier le commentaire">
+          Publier
+        </button>
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p aria-hidden="true">© 2026 - Bonobo Factory</p>
+</footer>
+
 </body>
-
 </html>

@@ -9,57 +9,84 @@
 </head>
 
 <body>
-  <header role="banner">
-        <p>Welcome to the world of Bonobo</p>
-    </header>
-  <main>
-    <h1>Connexion</h1>
 
-<form action="/ForumWeb/index.html" method="get">
+<header>
+  <p id="site-title">Welcome to the world of Bonobo</p>
+</header>
 
-  <p>
-    <label for="email">Email</label>
-    <input 
-      type="email"
-      id="email"
-      name="email"
-      autocomplete="username"
-      required
-      placeholder="exemple@email.com"
-      oninvalid="this.setCustomValidity('Veuillez entrer un email valide')"
-      oninput="this.setCustomValidity('')"
-    />
-  </p>
+<main aria-labelledby="login-title">
 
-  <p>
-    <label for="password">Mot de passe </label>
-    <input 
-      type="password"
-      id="password"
-      name="password"
-      autocomplete="current-password"
-      required
-      minlength="6"
-      placeholder="Au moins 6 caractères"
-      oninvalid="this.setCustomValidity('Veuillez entrer un mot de passe d’au moins 6 caractères')"
-      oninput="this.setCustomValidity('')"
-    />
-  </p>
+  <h1 id="login-title">Connexion</h1>
 
-  <p>
-    <button type="submit">Se connecter</button>
-  </p>
+  <form action="/ForumWeb/index.html" method="get" aria-describedby="form-help">
 
-</form>
-
-    <p>
-      <a href="#">Mot de passe oublié ?</a>
+    <p id="form-help">
+      Veuillez renseigner votre email et votre mot de passe pour vous connecter.
     </p>
 
     <p>
-      Pas de compte ? <a href="#">Créer un compte</a>
+      <label for="email">Email</label>
+
+      <input 
+        type="email"
+        id="email"
+        name="email"
+        autocomplete="username"
+        required
+        placeholder="exemple@email.com"
+        aria-describedby="email-help"
+        oninvalid="this.setCustomValidity('Veuillez entrer un email valide')"
+        oninput="this.setCustomValidity('')"
+      />
+
+      <small id="email-help">
+        Exemple : nom@domaine.com
+      </small>
     </p>
-  </main>
+
+    <p>
+      <label for="password">Mot de passe</label>
+
+      <input 
+        type="password"
+        id="password"
+        name="password"
+        autocomplete="current-password"
+        required
+        minlength="6"
+        placeholder="Au moins 6 caractères"
+        aria-describedby="password-help"
+        oninvalid="this.setCustomValidity('Veuillez entrer un mot de passe d’au moins 6 caractères')"
+        oninput="this.setCustomValidity('')"
+      />
+
+      <small id="password-help">
+        Minimum 6 caractères.
+      </small>
+    </p>
+
+    <p>
+      <button type="submit" aria-label="Se connecter au compte">
+        Se connecter
+      </button>
+    </p>
+
+  </form>
+
+  <p>
+    <a href="#" aria-label="Récupérer un mot de passe oublié">
+      Mot de passe oublié ?
+    </a>
+  </p>
+
+  <p>
+    Pas de compte ?
+    <a href="#" aria-label="Créer un nouveau compte">
+      Créer un compte
+    </a>
+  </p>
+
+</main>
+
 </body>
-
 </html>

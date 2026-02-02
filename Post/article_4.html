@@ -9,149 +9,211 @@
 </head>
 
 <body>
-  <header>
-    <p>Welcome to the world of Bonobo</p>
-    <nav>
-      <a href="../index.html">Accueil</a>
-      <a href="../login.html">Login</a>
-    </nav>
-  </header>
 
-  <main>
-    <article id="sujet">
-      <header>
-        <h2>L’alimentation des bonobos</h2>
-        <p>
-          <strong>Auteur :</strong> Alex |
-          <strong>Date :</strong> 29 janvier 2026 |
-          <strong>Tags :</strong> assistance, matériel
-        </p>
-      </header>
+<header>
+  <p id="site-title">Welcome to the world of Bonobo</p>
 
-      <section>
-        <p>
-          Bonjour a tous voici un tableaux sur ce que mange les bonobos :
-        </p>
-        <table>
-          <thead>
-            <tr>
-              <th scope="col">Catégorie d’aliments</th>
-              <th scope="col">% des observations</th>
-              <th scope="col">Exemples d’aliments consommés</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <th scope="row">Fruits mûrs</th>
-              <td><strong>53,6 %</strong></td>
-              <td>Figues, mangues sauvages, fruits de lianes, fruits de palmiers</td>
-            </tr>
-            <tr>
-              <th scope="row">Graines sèches (graines d’arbres)</th>
-              <td><strong>36,0 %</strong></td>
-              <td>Graines de Dialium, Irvingia, Panda, Anonidium</td>
-            </tr>
-            <tr>
-              <th scope="row">Végétation herbacée terrestre (THV)</th>
-              <td><strong>4,4 %</strong></td>
-              <td>Moelle de tiges, pétioles, herbes, plantes de sous-bois</td>
-            </tr>
-            <tr>
-              <th scope="row">Jeunes feuilles arboricoles</th>
-              <td><strong>3,2 %</strong></td>
-              <td>Feuilles tendres d’arbres et de lianes</td>
-            </tr>
-            <tr>
-              <th scope="row">Champignons (truffes)</th>
-              <td><strong>1,4 %</strong></td>
-              <td>Champignons souterrains</td>
-            </tr>
-            <tr>
-              <th scope="row">Bois mort (liane)</th>
-              <td><strong>0,9 %</strong></td>
-              <td>Parties ligneuses de lianes en décomposition</td>
-            </tr>
-            <tr>
-              <th scope="row">Aliment non identifié</th>
-              <td><strong>0,3 %</strong></td>
-              <td>Non déterminé</td>
-            </tr>
-          </tbody>
-        </table>
+  <nav aria-labelledby="site-title">
+    <a href="../index.html">Accueil</a>
+    <a href="../login.html">Login</a>
+  </nav>
+</header>
 
+<main>
 
-        <p>
-          Est-ce que ça vous est déjà arrivé ? Des pistes pour diagnostiquer (température,
-          alim, pilotes, etc.) ?
-        </p>
-      </section>
+  <article id="sujet" aria-labelledby="post-title">
 
-    </article>
+    <header>
+      <h2 id="post-title">L’alimentation des bonobos</h2>
 
-    <section aria-labelledby="commentaires">
-      <h3 id="commentaires">Commentaires</h3>
+      <p id="post-meta">
+        <strong>Auteur :</strong> Alex |
+        <strong>Date :</strong> 29 janvier 2026 |
+        <strong>Tags :</strong> assistance, matériel
+      </p>
+    </header>
 
-      <section>
-        <header>
-          <p>
-            <strong>Camille</strong> - <time datetime="2026-01-29T10:12">10:12</time>
-          </p>
-        </header>
-        <p>
-          Ça ressemble à une surchauffe ou une alimentation qui lâche. Tu peux regarder les
-          températures (CPU/GPU) et écouter si les ventilateurs s’emballent juste avant le
-          redémarrage.
-        </p>
-      </section>
+    <section aria-describedby="post-meta">
 
-      <section>
-        <header>
-          <p>
-            <strong>Pedro</strong> - <time datetime="2026-01-29T10:12">10:12</time>
-          </p>
-        </header>
-        <p>
-          Merci pour le partage de ce tableau, c’est très intéressant. On voit bien que
-          l’alimentation des bonobos est majoritairement composée de fruits et de graines,
-          ce qui confirme leur régime essentiellement frugivore, tout en restant assez varié.
-          J’apprécie le fait que tu aies inclus des catégories moins connues comme les champignons
-          ou le bois mort, ça montre à quel point leur alimentation est plus diversifiée qu’on ne l’imagine souvent.
-        </p>
-      </section>
+      <p>
+        Bonjour à tous, voici un tableau sur ce que mangent les bonobos :
+      </p>
+
+      <table aria-describedby="table-desc">
+
+        <caption id="table-desc">
+          Répartition des catégories d’aliments consommés par les bonobos (en pourcentage).
+        </caption>
+
+        <thead>
+          <tr>
+            <th scope="col">Catégorie d’aliments</th>
+            <th scope="col">% des observations</th>
+            <th scope="col">Exemples d’aliments consommés</th>
+          </tr>
+        </thead>
+
+        <tbody>
+          <tr>
+            <th scope="row">Fruits mûrs</th>
+            <td><strong>53,6 %</strong></td>
+            <td>Figues, mangues sauvages, fruits de lianes, fruits de palmiers</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Graines sèches (graines d’arbres)</th>
+            <td><strong>36,0 %</strong></td>
+            <td>Graines de Dialium, Irvingia, Panda, Anonidium</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Végétation herbacée terrestre (THV)</th>
+            <td><strong>4,4 %</strong></td>
+            <td>Moelle de tiges, pétioles, herbes, plantes de sous-bois</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Jeunes feuilles arboricoles</th>
+            <td><strong>3,2 %</strong></td>
+            <td>Feuilles tendres d’arbres et de lianes</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Champignons (truffes)</th>
+            <td><strong>1,4 %</strong></td>
+            <td>Champignons souterrains</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Bois mort (liane)</th>
+            <td><strong>0,9 %</strong></td>
+            <td>Parties ligneuses de lianes en décomposition</td>
+          </tr>
+
+          <tr>
+            <th scope="row">Aliment non identifié</th>
+            <td><strong>0,3 %</strong></td>
+            <td>Non déterminé</td>
+          </tr>
+        </tbody>
+
+      </table>
+
+      <p>
+        Est-ce que ça vous est déjà arrivé ? Des pistes pour diagnostiquer (température,
+        alim, pilotes, etc.) ?
+      </p>
 
     </section>
 
-    <section aria-labelledby="repondre">
-        <h3 id="repondre">Répondre</h3>
+  </article>
 
-        <form action="#" method="get">
+  <!-- COMMENTAIRES -->
 
-          <div>
-            <label for="pseudo">Pseudo </label>
-            <input id="pseudo" name="pseudo" type="text" required minlength="3" placeholder="Votre pseudo"
-              oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
-              oninput="this.setCustomValidity('')" />
-          </div>
+  <section aria-labelledby="commentaires-title">
 
-          <div>
-            <label for="message">Message</label>
-            <textarea id="message" name="message" rows="6" cols="60" required minlength="10"
-              placeholder="Votre message..."
-              oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
-              oninput="this.setCustomValidity('')"></textarea>
-          </div>
+    <h3 id="commentaires-title">Commentaires</h3>
 
-          <div>
-            <button type="submit">Publier</button>
-          </div>
+    <section aria-labelledby="comment1-author">
+      <header>
+        <p id="comment1-author">
+          <strong>Camille</strong> -
+          <time datetime="2026-01-29T10:12">10:12</time>
+        </p>
+      </header>
 
-        </form>
-      </section>
-  </main>
+      <p>
+        Ça ressemble à une surchauffe ou une alimentation qui lâche. Tu peux regarder les
+        températures (CPU/GPU) et écouter si les ventilateurs s’emballent juste avant le
+        redémarrage.
+      </p>
+    </section>
 
-  <footer>
-        <a>© 2026 - Bonobo Factory</a>
-  </footer>
+    <section aria-labelledby="comment2-author">
+      <header>
+        <p id="comment2-author">
+          <strong>Pedro</strong> -
+          <time datetime="2026-01-29T10:12">10:12</time>
+        </p>
+      </header>
+
+      <p>
+        Merci pour le partage de ce tableau, c’est très intéressant. On voit bien que
+        l’alimentation des bonobos est majoritairement composée de fruits et de graines,
+        ce qui confirme leur régime essentiellement frugivore, tout en restant assez varié.
+        J’apprécie le fait que tu aies inclus des catégories moins connues comme les champignons
+        ou le bois mort, ça montre à quel point leur alimentation est plus diversifiée qu’on ne l’imagine souvent.
+      </p>
+    </section>
+
+  </section>
+
+  <!-- FORMULAIRE -->
+
+  <section aria-labelledby="reply-title">
+
+    <h3 id="reply-title">Répondre</h3>
+
+    <form action="#" method="get" aria-describedby="form-help">
+
+      <p id="form-help">
+        Tous les champs sont obligatoires.
+      </p>
+
+      <div>
+        <label for="pseudo">Pseudo</label>
+
+        <input
+          id="pseudo"
+          name="pseudo"
+          type="text"
+          required
+          minlength="3"
+          placeholder="Votre pseudo"
+          aria-describedby="pseudo-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un pseudo (au moins 3 caractères)')"
+          oninput="this.setCustomValidity('')" />
+
+        <small id="pseudo-help">
+          Minimum 3 caractères.
+        </small>
+      </div>
+
+      <div>
+        <label for="message">Message</label>
+
+        <textarea
+          id="message"
+          name="message"
+          rows="6"
+          cols="60"
+          required
+          minlength="10"
+          placeholder="Votre message..."
+          aria-describedby="message-help"
+          oninvalid="this.setCustomValidity('Veuillez entrer un message d’au moins 10 caractères')"
+          oninput="this.setCustomValidity('')"></textarea>
+
+        <small id="message-help">
+          Minimum 10 caractères.
+        </small>
+      </div>
+
+      <div>
+        <button type="submit" aria-label="Publier le commentaire">
+          Publier
+        </button>
+      </div>
+
+    </form>
+
+  </section>
+
+</main>
+
+<footer>
+  <p aria-hidden="true">© 2026 - Bonobo Factory</p>
+</footer>
+
 </body>
-
 </html>
